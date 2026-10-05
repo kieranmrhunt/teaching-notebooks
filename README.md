@@ -18,6 +18,14 @@ This guided notebook builds a compact XGBoost-like learner from the mathematics 
 
 The notebook is deliberately more readable than production XGBoost while retaining the core ideas. It was executed top-to-bottom with Python 3.11; outputs are retained and the meteorological dataset is generated within the notebook.
 
+## Nonlinear stochastic ENSO oscillator
+
+[Open the notebook on GitHub](./enso-oscillator.ipynb).
+
+This notebook reproduces the Jin, Jin++, and Jin++ delayed-memory ENSO experiments, including the diagnostic scorecards, mechanism ablations, parameter sensitivities, and 50,000-year extreme-event controls. The frozen 1979--2025 observational input is stored in `data/`, and the reusable simulator and diagnostic code is stored in `src/`.
+
+For an isolated ENSO environment, install `enso-oscillator-requirements.txt`, start Jupyter in the repository root, and run `enso-oscillator.ipynb` from top to bottom. Set `MODE = "quick"` for a short smoke test or `MODE = "full"` for the manuscript settings. The extreme-event section has separate run-length controls and uses 50,000 retained years per model by default.
+
 ## Run locally
 
 ```bash
